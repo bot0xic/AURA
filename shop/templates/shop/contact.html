@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | AURA</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <!-- ================= START HEADER ================= -->
+    <header class="header">
+        <div class="container flex justify-between items-center">
+            <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            <nav class="nav-desktop">
+                <a href="products" class="nav-link">New Arrivals</a>
+                <a href="products" class="nav-link">Women</a>
+                <a href="products" class="nav-link">Men</a>
+                <a href="products" class="nav-link">Accessories</a>
+            </nav>
+            <a href="index" class="logo">AURA</a>
+            <div class="header-icons">
+                <a href="#" class="icon-btn" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="profile" class="icon-btn" title="Profile"><i class="fa-regular fa-user"></i></a>
+                <a href="#" class="icon-btn wishlist-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></a>
+                <a href="cart" class="icon-btn" title="Cart"><i class="fa-solid fa-bag-shopping"></i></a>
+            </div>
+        </div>
+    </header>
+    <!-- ================= END HEADER ================= -->
+
+    <main class="container">
+        
+        <div class="text-center mt-xxl mb-xl">
+            <h1 class="text-3xl mb-sm">Contact Us</h1>
+            <p class="text-muted" style="max-width: 600px; margin: 0 auto;">We're here to help. Reach out to us for any inquiries regarding your order, our products, or just to say hello.</p>
+        </div>
+
+        <div class="contact-layout">
+            
+            <!-- Contact Form -->
+            <div>
+                <h2 class="text-xl mb-md">Send a Message</h2>
+                <form onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                    <div class="form-row" style="display: flex; gap: var(--spacing-md); margin-bottom: var(--spacing-md);">
+                        <div class="form-group" style="flex: 1; margin-bottom: 0;">
+                            <label class="form-label">First Name</label>
+                            <input type="text" class="input-field" required>
+                        </div>
+                        <div class="form-group" style="flex: 1; margin-bottom: 0;">
+                            <label class="form-label">Last Name</label>
+                            <input type="text" class="input-field" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group mb-md">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="input-field" required>
+                    </div>
+
+                    <div class="form-group mb-md">
+                        <label class="form-label">Order Number (Optional)</label>
+                        <input type="text" class="input-field">
+                    </div>
+
+                    <div class="form-group mb-md">
+                        <label class="form-label">Message</label>
+                        <textarea class="input-field" rows="6" required style="resize: vertical;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div style="background-color: var(--color-bg-light); padding: var(--spacing-xl); border-radius: var(--border-radius);">
+                <h2 class="text-xl mb-lg">Get in Touch</h2>
+                
+                <div class="contact-info-block">
+                    <h3><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> Email</h3>
+                    <p>support@auraclothing.com</p>
+                    <p class="text-sm mt-xs">We aim to reply within 24 hours.</p>
+                </div>
+
+                <div class="contact-info-block">
+                    <h3><i class="fa-solid fa-phone" style="margin-right: 8px;"></i> Phone</h3>
+                    <p>+1 (555) 123-4567</p>
+                    <p class="text-sm mt-xs">Mon-Fri from 9am to 6pm EST.</p>
+                </div>
+
+                <div class="contact-info-block">
+                    <h3><i class="fa-solid fa-location-dot" style="margin-right: 8px;"></i> Head Office</h3>
+                    <p>123 Fashion Avenue<br>New York, NY 10001<br>United States</p>
+                </div>
+
+                <div class="mt-xl">
+                    <h3 class="text-lg mb-sm">Follow Us</h3>
+                    <div class="flex gap-md text-xl">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ================= START FOOTER ================= -->
+    <footer class="footer">
+        <div class="container text-center text-sm text-muted" style="padding-top: var(--spacing-xl);">
+            <p>&copy; 2026 AURA Clothing. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

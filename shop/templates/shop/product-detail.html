@@ -1,0 +1,253 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linen Blend Shirt | AURA</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <!-- ================= START HEADER ================= -->
+    <header class="header">
+        <div class="container flex justify-between items-center">
+            
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-desktop">
+                <a href="products" class="nav-link">New Arrivals</a>
+                <a href="products" class="nav-link">Women</a>
+                <a href="products" class="nav-link">Men</a>
+                <a href="products" class="nav-link">Accessories</a>
+            </nav>
+
+            <a href="index" class="logo">AURA</a>
+
+            <div class="header-icons">
+                <a href="#" class="icon-btn" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="profile" class="icon-btn" title="Profile"><i class="fa-regular fa-user"></i></a>
+                <a href="#" class="icon-btn wishlist-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></a>
+                <a href="cart" class="icon-btn" title="Cart"><i class="fa-solid fa-bag-shopping"></i></a>
+            </div>
+            
+        </div>
+    </header>
+    <!-- ================= END HEADER ================= -->
+
+    <main class="container">
+        
+        <!-- Breadcrumbs -->
+        <div class="mt-lg text-sm text-muted">
+            <a href="index">Home</a> / <a href="products">Women</a> / <a href="products">Tops</a> / <span style="color: var(--color-text-main);">Linen Blend Shirt</span>
+        </div>
+
+        <div class="product-detail-layout">
+            
+            <!-- Product Gallery -->
+            <div class="product-gallery">
+                <div class="gallery-thumbnails">
+                    <img src="https://images.unsplash.com/photo-1618932260643-eee4a2f652a6?q=80&w=800&auto=format&fit=crop" class="gallery-thumbnail active" alt="Thumb 1">
+                    <img src="https://images.unsplash.com/photo-1588117260148-b47818741c74?q=80&w=800&auto=format&fit=crop" class="gallery-thumbnail" alt="Thumb 2">
+                    <img src="https://images.unsplash.com/photo-1623308670541-0610f63ce5d7?q=80&w=800&auto=format&fit=crop" class="gallery-thumbnail" alt="Thumb 3">
+                </div>
+                <div class="gallery-main">
+                    <img src="https://images.unsplash.com/photo-1618932260643-eee4a2f652a6?q=80&w=1200&auto=format&fit=crop" alt="Main Product Image">
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="product-info-section">
+                <div>
+                    <span class="product-brand" style="font-size: 0.875rem;">AURA</span>
+                    <h1 class="product-title">Linen Blend Shirt</h1>
+                    <div class="product-price-large">$59.99</div>
+                    <div class="mt-sm">
+                        <span class="stock-status">In Stock</span>
+                    </div>
+                </div>
+
+                <p class="text-muted" style="line-height: 1.6;">
+                    Crafted from a breathable linen blend, this relaxed-fit shirt features a classic collar, button placket, and long sleeves with buttoned cuffs. Perfect for warm weather styling.
+                </p>
+
+                <!-- Color Selection -->
+                <div class="mt-md">
+                    <h4 class="mb-sm">Color: <span class="text-muted" style="font-weight: 400;">Off-White</span></h4>
+                    <div class="flex gap-sm">
+                        <div style="width: 32px; height: 32px; border-radius: 50%; background-color: #f5f5dc; border: 2px solid var(--color-black); cursor: pointer;"></div>
+                        <div style="width: 32px; height: 32px; border-radius: 50%; background-color: #1a1a1a; border: 1px solid var(--color-border); cursor: pointer;"></div>
+                        <div style="width: 32px; height: 32px; border-radius: 50%; background-color: #c4a484; border: 1px solid var(--color-border); cursor: pointer;"></div>
+                    </div>
+                </div>
+
+                <!-- Size Selection -->
+                <div class="mt-md">
+                    <div class="flex justify-between items-center mb-sm">
+                        <h4>Size</h4>
+                        <a href="#" class="text-sm nav-link">Size Guide</a>
+                    </div>
+                    <div class="flex gap-sm flex-wrap">
+                        <span style="border: 1px solid var(--color-border); padding: 8px 16px; cursor: pointer; border-radius: 4px;">XS</span>
+                        <span style="border: 1px solid var(--color-black); background: var(--color-black); color: white; padding: 8px 16px; cursor: pointer; border-radius: 4px;">S</span>
+                        <span style="border: 1px solid var(--color-border); padding: 8px 16px; cursor: pointer; border-radius: 4px;">M</span>
+                        <span style="border: 1px solid var(--color-border); padding: 8px 16px; cursor: pointer; border-radius: 4px;">L</span>
+                        <span style="border: 1px solid #e5e5e5; color: #a0a0a0; padding: 8px 16px; cursor: not-allowed; border-radius: 4px; background: #f9f9f9;">XL (Out of stock)</span>
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="flex gap-md mt-lg items-center">
+                    <div class="quantity-selector">
+                        <button class="qty-btn" type="button">-</button>
+                        <input type="text" value="1" class="qty-input" readonly>
+                        <button class="qty-btn" type="button">+</button>
+                    </div>
+                    <button class="btn btn-primary btn-full add-to-cart-btn" style="padding: 16px;">Add to Cart</button>
+                    <button class="icon-btn wishlist-btn" style="border: 1px solid var(--color-border); width: 54px; height: 54px; display: flex; align-items: center; justify-content: center; border-radius: var(--border-radius);"><i class="fa-regular fa-heart"></i></button>
+                </div>
+
+                <!-- Accordion/Tabs for Details -->
+                <div class="product-description-tabs">
+                    <div class="flex justify-between items-center mb-sm cursor-pointer" style="cursor: pointer;">
+                        <h4 class="font-weight-600">Product Details</h4>
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </div>
+                    <ul class="text-muted text-sm" style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
+                        <li>55% Linen, 45% Viscose</li>
+                        <li>Relaxed fit</li>
+                        <li>Machine wash cold</li>
+                        <li>Imported</li>
+                    </ul>
+                </div>
+                
+                <div style="border-top: 1px solid var(--color-border); padding-top: var(--spacing-md); margin-top: var(--spacing-sm);">
+                    <div class="flex justify-between items-center cursor-pointer" style="cursor: pointer;">
+                        <h4 class="font-weight-600">Shipping & Returns</h4>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Related Products -->
+        <section class="my-xxxl">
+            <h2 class="text-2xl text-center mb-lg">You May Also Like</h2>
+            <div class="product-grid" style="grid-template-columns: repeat(4, 1fr);">
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <a href="product-detail">
+                            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=800&auto=format&fit=crop" alt="Product" class="product-img">
+                        </a>
+                        <div class="product-actions">
+                            <button class="btn btn-primary btn-full add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">AURA ESSENTIALS</span>
+                        <a href="product-detail" class="product-name">Classic Denim Jacket</a>
+                        <div class="product-price">$89.99</div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <a href="product-detail">
+                            <img src="https://images.unsplash.com/photo-1572804013309-82a891485753?q=80&w=800&auto=format&fit=crop" alt="Product" class="product-img">
+                        </a>
+                        <div class="product-actions">
+                            <button class="btn btn-primary btn-full add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">AURA</span>
+                        <a href="product-detail" class="product-name">Pleated Midi Skirt</a>
+                        <div class="product-price">$45.00</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= START FOOTER ================= -->
+    <footer class="footer">
+        <!-- Footer content... omitted for brevity, same as index in reality but I will add it here to be complete -->
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="logo" style="margin-bottom: var(--spacing-md); font-size: 1.5rem;">AURA</h4>
+                    <p class="text-sm" style="color: #a0a0a0; max-width: 250px;">Redefining modern wardrobe essentials with timeless pieces designed to last.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="products">Women</a></li>
+                        <li><a href="products">Men</a></li>
+                        <li><a href="products">Accessories</a></li>
+                        <li><a href="products">New Arrivals</a></li>
+                        <li><a href="products">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="contact">Customer Service</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Shipping Information</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul style="flex-direction: row; gap: var(--spacing-md);">
+                        <li><a href="#" style="font-size: 1.25rem;"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#" style="font-size: 1.25rem;"><i class="fa-brands fa-tiktok"></i></a></li>
+                        <li><a href="#" style="font-size: 1.25rem;"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#" style="font-size: 1.25rem;"><i class="fa-brands fa-pinterest"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AURA Clothing. All rights reserved.</p>
+                <div class="flex gap-md">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ================= END FOOTER ================= -->
+
+    <script src="js/main.js"></script>
+    <script>
+        // Simple script for gallery thumbnail click
+        document.querySelectorAll('.gallery-thumbnail').forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                // Remove active class
+                document.querySelectorAll('.gallery-thumbnail').forEach(t => t.classList.remove('active'));
+                // Add to clicked
+                this.classList.add('active');
+                // Change main image
+                const mainImg = document.querySelector('.gallery-main img');
+                mainImg.src = this.src.replace('w=800', 'w=1200'); // Example of swapping resolution based on Unsplash URL
+            });
+        });
+    </script>
+</body>
+</html>

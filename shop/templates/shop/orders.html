@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History | AURA</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <!-- ================= START HEADER ================= -->
+    <header class="header">
+        <div class="container flex justify-between items-center">
+            <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            <nav class="nav-desktop">
+                <a href="products" class="nav-link">New Arrivals</a>
+                <a href="products" class="nav-link">Women</a>
+                <a href="products" class="nav-link">Men</a>
+                <a href="products" class="nav-link">Accessories</a>
+            </nav>
+            <a href="index" class="logo">AURA</a>
+            <div class="header-icons">
+                <a href="#" class="icon-btn" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="profile" class="icon-btn" title="Profile"><i class="fa-solid fa-user"></i></a>
+                <a href="#" class="icon-btn wishlist-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></a>
+                <a href="cart" class="icon-btn" title="Cart"><i class="fa-solid fa-bag-shopping"></i></a>
+            </div>
+        </div>
+    </header>
+    <!-- ================= END HEADER ================= -->
+
+    <main class="container">
+        <h1 class="text-3xl mt-lg">My Account</h1>
+
+        <div class="account-layout">
+            
+            <aside class="account-sidebar">
+                <a href="profile" class="account-link">Personal Information</a>
+                <a href="orders" class="account-link active">Order History</a>
+                <a href="#" class="account-link">Saved Addresses</a>
+                <a href="login" class="account-link" style="color: var(--color-error); margin-top: var(--spacing-lg);">Sign Out</a>
+            </aside>
+
+            <div class="account-content">
+                <h2 class="text-xl mb-md">Order History</h2>
+
+                <!-- Order 1 -->
+                <div class="order-card">
+                    <div class="order-header">
+                        <div>
+                            <span class="text-muted">Order Placed:</span> <span class="font-weight-500">August 3, 2026</span>
+                        </div>
+                        <div>
+                            <span class="text-muted">Total:</span> <span class="font-weight-500">$161.98</span>
+                        </div>
+                        <div>
+                            <span class="text-muted">Order #</span> <span class="font-weight-500">AURA-83920</span>
+                        </div>
+                        <div>
+                            <a href="#" class="nav-link text-sm">View Details</a>
+                        </div>
+                    </div>
+                    <div class="order-body">
+                        <div class="flex justify-between items-center mb-sm">
+                            <h3 class="text-lg">Arriving Tomorrow</h3>
+                            <span class="status-badge status-shipped">Shipped</span>
+                        </div>
+                        
+                        <div class="order-item">
+                            <img src="https://images.unsplash.com/photo-1618932260643-eee4a2f652a6?q=80&w=100&auto=format&fit=crop" class="order-item-img" alt="Product">
+                            <div>
+                                <a href="product-detail" class="font-weight-500">Linen Blend Shirt</a>
+                                <p class="text-sm text-muted">Off-White, Size M</p>
+                                <p class="text-sm">Qty: 1</p>
+                            </div>
+                        </div>
+                        <div class="order-item">
+                            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=100&auto=format&fit=crop" class="order-item-img" alt="Product">
+                            <div>
+                                <a href="product-detail" class="font-weight-500">Classic Denim Jacket</a>
+                                <p class="text-sm text-muted">Vintage Blue, Size L</p>
+                                <p class="text-sm">Qty: 1</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order 2 -->
+                <div class="order-card">
+                    <div class="order-header">
+                        <div>
+                            <span class="text-muted">Order Placed:</span> <span class="font-weight-500">July 15, 2026</span>
+                        </div>
+                        <div>
+                            <span class="text-muted">Total:</span> <span class="font-weight-500">$45.00</span>
+                        </div>
+                        <div>
+                            <span class="text-muted">Order #</span> <span class="font-weight-500">AURA-71032</span>
+                        </div>
+                        <div>
+                            <a href="#" class="nav-link text-sm">View Details</a>
+                        </div>
+                    </div>
+                    <div class="order-body">
+                        <div class="flex justify-between items-center mb-sm">
+                            <h3 class="text-lg">Delivered July 18, 2026</h3>
+                            <span class="status-badge status-delivered">Delivered</span>
+                        </div>
+                        
+                        <div class="order-item">
+                            <img src="https://images.unsplash.com/photo-1572804013309-82a891485753?q=80&w=100&auto=format&fit=crop" class="order-item-img" alt="Product">
+                            <div>
+                                <a href="product-detail" class="font-weight-500">Pleated Midi Skirt</a>
+                                <p class="text-sm text-muted">Black, Size S</p>
+                                <p class="text-sm">Qty: 1</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ================= START FOOTER ================= -->
+    <footer class="footer">
+        <div class="container text-center text-sm text-muted" style="padding-top: var(--spacing-xl);">
+            <p>&copy; 2026 AURA Clothing. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

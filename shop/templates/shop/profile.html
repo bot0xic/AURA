@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account | AURA</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <!-- ================= START HEADER ================= -->
+    <header class="header">
+        <div class="container flex justify-between items-center">
+            <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            <nav class="nav-desktop">
+                <a href="products" class="nav-link">New Arrivals</a>
+                <a href="products" class="nav-link">Women</a>
+                <a href="products" class="nav-link">Men</a>
+                <a href="products" class="nav-link">Accessories</a>
+            </nav>
+            <a href="index" class="logo">AURA</a>
+            <div class="header-icons">
+                <a href="#" class="icon-btn" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="profile" class="icon-btn" title="Profile"><i class="fa-solid fa-user"></i></a>
+                <a href="#" class="icon-btn wishlist-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></a>
+                <a href="cart" class="icon-btn" title="Cart"><i class="fa-solid fa-bag-shopping"></i></a>
+            </div>
+        </div>
+    </header>
+    <!-- ================= END HEADER ================= -->
+
+    <main class="container">
+        <h1 class="text-3xl mt-lg">My Account</h1>
+
+        <div class="account-layout">
+            
+            <aside class="account-sidebar">
+                <a href="profile" class="account-link active">Personal Information</a>
+                <a href="orders" class="account-link">Order History</a>
+                <a href="#" class="account-link">Saved Addresses</a>
+                <a href="login" class="account-link" style="color: var(--color-error); margin-top: var(--spacing-lg);">Sign Out</a>
+            </aside>
+
+            <div class="account-content">
+                <h2 class="text-xl mb-md">Personal Information</h2>
+                <form onsubmit="event.preventDefault(); alert('Profile updated!');">
+                    <div class="form-row" style="display: flex; gap: var(--spacing-md); margin-bottom: var(--spacing-md);">
+                        <div class="form-group" style="flex: 1; margin-bottom: 0;">
+                            <label class="form-label">First Name</label>
+                            <input type="text" class="input-field" value="Jane">
+                        </div>
+                        <div class="form-group" style="flex: 1; margin-bottom: 0;">
+                            <label class="form-label">Last Name</label>
+                            <input type="text" class="input-field" value="Doe">
+                        </div>
+                    </div>
+                    <div class="form-group mb-md">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="input-field" value="jane.doe@example.com">
+                    </div>
+                    
+                    <h3 class="text-lg mt-lg mb-sm">Change Password</h3>
+                    <div class="form-group mb-md">
+                        <label class="form-label">Current Password</label>
+                        <input type="password" class="input-field">
+                    </div>
+                    <div class="form-row" style="display: flex; gap: var(--spacing-md); margin-bottom: var(--spacing-md);">
+                        <div class="form-group" style="flex: 1; margin-bottom: 0;">
+                            <label class="form-label">New Password</label>
+                            <input type="password" class="input-field">
+                        </div>
+                        <div class="form-group" style="flex: 1; margin-bottom: 0;">
+                            <label class="form-label">Confirm New Password</label>
+                            <input type="password" class="input-field">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary mt-sm">Save Changes</button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ================= START FOOTER ================= -->
+    <footer class="footer">
+        <div class="container text-center text-sm text-muted" style="padding-top: var(--spacing-xl);">
+            <p>&copy; 2026 AURA Clothing. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

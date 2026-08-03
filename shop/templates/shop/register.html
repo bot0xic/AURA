@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | AURA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body style="background-color: var(--color-bg-light); min-height: 100vh; display: flex; flex-direction: column;">
+
+    <header class="header" style="background-color: var(--color-white);">
+        <div class="container flex justify-between items-center text-center w-full">
+            <a href="index" class="logo mx-auto" style="margin: 0 auto;">AURA</a>
+        </div>
+    </header>
+
+    <main class="container" style="flex: 1;">
+        <div class="auth-layout">
+            <h1 class="auth-title">Create Account</h1>
+            <form action="profile" method="GET">
+                <div class="form-row" style="display: flex; gap: var(--spacing-md); margin-bottom: var(--spacing-md);">
+                    <div class="form-group" style="flex: 1; margin-bottom: 0;">
+                        <label class="form-label">First Name</label>
+                        <input type="text" class="input-field" required>
+                    </div>
+                    <div class="form-group" style="flex: 1; margin-bottom: 0;">
+                        <label class="form-label">Last Name</label>
+                        <input type="text" class="input-field" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="input-field" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="input-field" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full mt-sm" style="padding: 16px;">Create Account</button>
+            </form>
+            <div class="auth-footer">
+                <p>Already have an account? <a href="login" class="font-weight-600" style="text-decoration: underline;">Sign In</a></p>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

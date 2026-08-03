@@ -1,0 +1,289 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | AURA</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <!-- ================= START HEADER ================= -->
+    <header class="header">
+        <div class="container flex justify-between items-center">
+            
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-desktop">
+                <a href="products" class="nav-link">New Arrivals</a>
+                <a href="products" class="nav-link">Women</a>
+                <a href="products" class="nav-link">Men</a>
+                <a href="products" class="nav-link">Accessories</a>
+            </nav>
+
+            <a href="index" class="logo">AURA</a>
+
+            <div class="header-icons">
+                <a href="#" class="icon-btn" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="profile" class="icon-btn" title="Profile"><i class="fa-regular fa-user"></i></a>
+                <a href="#" class="icon-btn wishlist-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></a>
+                <a href="cart" class="icon-btn" title="Cart"><i class="fa-solid fa-bag-shopping"></i></a>
+            </div>
+            
+        </div>
+    </header>
+    <!-- ================= END HEADER ================= -->
+
+    <main class="container">
+        
+        <!-- Breadcrumbs & Header -->
+        <div class="products-header mt-lg">
+            <div>
+                <h1 class="text-3xl">Women's Collection</h1>
+                <p class="text-muted mt-sm">Showing 1-12 of 36 products</p>
+            </div>
+            
+            <div class="flex items-center gap-sm">
+                <span class="text-sm font-weight-500">Sort by:</span>
+                <select class="sort-select">
+                    <option value="newest">Newest Arrivals</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="rating">Best Rated</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="products-layout">
+            
+            <!-- Sidebar Filters -->
+            <aside class="filters-sidebar">
+                
+                <div class="filter-group">
+                    <h3 class="filter-group-title">Category <i class="fa-solid fa-chevron-up"></i></h3>
+                    <div class="filter-options">
+                        <label class="filter-checkbox"><input type="checkbox" checked> All Women</label>
+                        <label class="filter-checkbox"><input type="checkbox"> Dresses</label>
+                        <label class="filter-checkbox"><input type="checkbox"> Tops & Shirts</label>
+                        <label class="filter-checkbox"><input type="checkbox"> Outerwear</label>
+                        <label class="filter-checkbox"><input type="checkbox"> Denim</label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3 class="filter-group-title">Brand <i class="fa-solid fa-chevron-up"></i></h3>
+                    <div class="filter-options">
+                        <label class="filter-checkbox"><input type="checkbox"> AURA</label>
+                        <label class="filter-checkbox"><input type="checkbox"> AURA ESSENTIALS</label>
+                        <label class="filter-checkbox"><input type="checkbox"> AURA STUDIO</label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3 class="filter-group-title">Size <i class="fa-solid fa-chevron-up"></i></h3>
+                    <div class="filter-options" style="flex-direction: row; flex-wrap: wrap; gap: 8px;">
+                        <span style="border: 1px solid var(--color-border); padding: 4px 12px; cursor: pointer; border-radius: 4px;">XS</span>
+                        <span style="border: 1px solid var(--color-black); background: var(--color-black); color: white; padding: 4px 12px; cursor: pointer; border-radius: 4px;">S</span>
+                        <span style="border: 1px solid var(--color-border); padding: 4px 12px; cursor: pointer; border-radius: 4px;">M</span>
+                        <span style="border: 1px solid var(--color-border); padding: 4px 12px; cursor: pointer; border-radius: 4px;">L</span>
+                        <span style="border: 1px solid var(--color-border); padding: 4px 12px; cursor: pointer; border-radius: 4px;">XL</span>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3 class="filter-group-title">Price <i class="fa-solid fa-chevron-down"></i></h3>
+                    <!-- In a real app, this would be a slider range -->
+                    <div class="filter-options" style="display: none;"></div>
+                </div>
+
+            </aside>
+
+            <!-- Product Grid -->
+            <div>
+                <div class="product-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="product-badge">New</div>
+                        <div class="product-img-wrapper">
+                            <a href="product-detail">
+                                <img src="https://images.unsplash.com/photo-1618932260643-eee4a2f652a6?q=80&w=800&auto=format&fit=crop" alt="Product" class="product-img">
+                                <img src="https://images.unsplash.com/photo-1588117260148-b47818741c74?q=80&w=800&auto=format&fit=crop" alt="Product Hover" class="product-img-hover">
+                            </a>
+                            <div class="product-actions">
+                                <button class="btn btn-primary btn-full add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-brand">AURA</span>
+                            <a href="product-detail" class="product-name">Linen Blend Shirt</a>
+                            <div class="product-price">$59.99</div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <a href="product-detail">
+                                <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=800&auto=format&fit=crop" alt="Product" class="product-img">
+                                <img src="https://images.unsplash.com/photo-1591047139829-1a1a1a1a1a1a?q=80&w=800&auto=format&fit=crop" alt="Product Hover" class="product-img-hover">
+                            </a>
+                            <div class="product-actions">
+                                <button class="btn btn-primary btn-full add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-brand">AURA ESSENTIALS</span>
+                            <a href="product-detail" class="product-name">Classic Denim Jacket</a>
+                            <div class="product-price">$89.99 <span class="product-price-old">$110.00</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <a href="product-detail">
+                                <img src="https://images.unsplash.com/photo-1572804013309-82a891485753?q=80&w=800&auto=format&fit=crop" alt="Product" class="product-img">
+                            </a>
+                            <div class="product-actions">
+                                <button class="btn btn-primary btn-full add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-brand">AURA</span>
+                            <a href="product-detail" class="product-name">Pleated Midi Skirt</a>
+                            <div class="product-price">$45.00</div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card">
+                        <div class="product-badge">Trending</div>
+                        <div class="product-img-wrapper">
+                            <a href="product-detail">
+                                <img src="https://images.unsplash.com/photo-1550639524-a6f58345a083?q=80&w=800&auto=format&fit=crop" alt="Product" class="product-img">
+                            </a>
+                            <div class="product-actions">
+                                <button class="btn btn-primary btn-full add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-brand">AURA STUDIO</span>
+                            <a href="product-detail" class="product-name">Oversized Knit Sweater</a>
+                            <div class="product-price">$75.00</div>
+                        </div>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <a href="product-detail">
+                                <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?q=80&w=800&auto=format&fit=crop" alt="Product" class="product-img">
+                            </a>
+                            <div class="product-actions">
+                                <button class="btn btn-primary btn-full add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-brand">AURA</span>
+                            <a href="product-detail" class="product-name">Basic Cotton Tee</a>
+                            <div class="product-price">$25.00</div>
+                        </div>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <a href="product-detail">
+                                <img src="https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?q=80&w=800&auto=format&fit=crop" alt="Product" class="product-img">
+                            </a>
+                            <div class="product-actions">
+                                <button class="btn btn-primary btn-full add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-brand">AURA STUDIO</span>
+                            <a href="product-detail" class="product-name">Tailored Trousers</a>
+                            <div class="product-price">$95.00</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <a href="#" class="page-btn"><i class="fa-solid fa-chevron-left"></i></a>
+                    <a href="#" class="page-btn active">1</a>
+                    <a href="#" class="page-btn">2</a>
+                    <a href="#" class="page-btn">3</a>
+                    <a href="#" class="page-btn"><i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- ================= START FOOTER ================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="logo" style="margin-bottom: var(--spacing-md); font-size: 1.5rem;">AURA</h4>
+                    <p class="text-sm" style="color: #a0a0a0; max-width: 250px;">Redefining modern wardrobe essentials with timeless pieces designed to last.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="products">Women</a></li>
+                        <li><a href="products">Men</a></li>
+                        <li><a href="products">Accessories</a></li>
+                        <li><a href="products">New Arrivals</a></li>
+                        <li><a href="products">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="contact">Customer Service</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Shipping Information</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul style="flex-direction: row; gap: var(--spacing-md);">
+                        <li><a href="#" style="font-size: 1.25rem;"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#" style="font-size: 1.25rem;"><i class="fa-brands fa-tiktok"></i></a></li>
+                        <li><a href="#" style="font-size: 1.25rem;"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#" style="font-size: 1.25rem;"><i class="fa-brands fa-pinterest"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AURA Clothing. All rights reserved.</p>
+                <div class="flex gap-md">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ================= END FOOTER ================= -->
+
+    <script src="js/main.js"></script>
+</body>
+</html>

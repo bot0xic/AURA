@@ -1,0 +1,242 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA | Modern Clothing</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <!-- ================= START HEADER ================= -->
+    <header class="header">
+        <div class="container flex justify-between items-center">
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Navigation -->
+            <nav class="nav-desktop">
+                <a href="products" class="nav-link">New Arrivals</a>
+                <a href="products" class="nav-link">Women</a>
+                <a href="products" class="nav-link">Men</a>
+                <a href="products" class="nav-link">Accessories</a>
+            </nav>
+
+            <!-- Logo -->
+            <a href="index" class="logo">AURA</a>
+
+            <!-- Header Icons -->
+            <div class="header-icons">
+                <a href="#" class="icon-btn" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="profile" class="icon-btn" title="Profile"><i class="fa-regular fa-user"></i></a>
+                <a href="#" class="icon-btn wishlist-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></a>
+                <a href="cart" class="icon-btn" title="Cart"><i class="fa-solid fa-bag-shopping"></i></a>
+            </div>
+            
+        </div>
+    </header>
+    <!-- ================= END HEADER ================= -->
+
+    <main>
+        <!-- Hero Banner -->
+        <section class="hero">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070&auto=format&fit=crop" alt="Summer Collection" class="hero-img">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">The Summer Edit</h1>
+                <p class="hero-subtitle">Discover effortless style for the new season.</p>
+                <a href="products." class="btn btn-primary">Shop Now</a>
+            </div>
+        </section>
+
+        <!-- Featured Categories -->
+        <section class="container my-xxl">
+            <h2 class="text-3xl text-center mb-lg">Shop by Category</h2>
+            <div class="category-grid">
+                <a href="products" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1000&auto=format&fit=crop" alt="Women's Collection">
+                    <div class="category-content">
+                        <h3 class="category-title">Women</h3>
+                        <span class="btn btn-secondary">Explore</span>
+                    </div>
+                </a>
+                <a href="products" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?q=80&w=1000&auto=format&fit=crop" alt="Men's Collection">
+                    <div class="category-content">
+                        <h3 class="category-title">Men</h3>
+                        <span class="btn btn-secondary">Explore</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- New Arrivals (Product Grid) -->
+        <section class="container my-xxl">
+            <div class="flex justify-between items-center mb-lg">
+                <h2 class="text-2xl">New Arrivals</h2>
+                <a href="products" class="text-sm nav-link">View All</a>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-badge">New</div>
+                    <div class="product-img-wrapper">
+                        <a href="product-detail">
+                            <img src="https://images.unsplash.com/photo-1618932260643-eee4a2f652a6?q=80&w=800&auto=format&fit=crop" alt="Product" class="product-img">
+                            <img src="https://images.unsplash.com/photo-1588117260148-b47818741c74?q=80&w=800&auto=format&fit=crop" alt="Product Hover" class="product-img-hover">
+                        </a>
+                        <div class="product-actions">
+                            <button class="btn btn-primary btn-full add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">AURA</span>
+                        <a href="product-detail" class="product-name">Linen Blend Shirt</a>
+                        <div class="product-price">$59.99</div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <a href="product-detail">
+                            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=800&auto=format&fit=crop" alt="Product" class="product-img">
+                            <img src="https://images.unsplash.com/photo-1591047139829-1a1a1a1a1a1a?q=80&w=800&auto=format&fit=crop" alt="Product Hover" class="product-img-hover">
+                        </a>
+                        <div class="product-actions">
+                            <button class="btn btn-primary btn-full add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">AURA ESSENTIALS</span>
+                        <a href="product-detail" class="product-name">Classic Denim Jacket</a>
+                        <div class="product-price">$89.99 <span class="product-price-old">$110.00</span></div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <a href="product-detail">
+                            <img src="https://images.unsplash.com/photo-1572804013309-82a891485753?q=80&w=800&auto=format&fit=crop" alt="Product" class="product-img">
+                        </a>
+                        <div class="product-actions">
+                            <button class="btn btn-primary btn-full add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">AURA</span>
+                        <a href="product-detail" class="product-name">Pleated Midi Skirt</a>
+                        <div class="product-price">$45.00</div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-badge">Trending</div>
+                    <div class="product-img-wrapper">
+                        <a href="product-detail">
+                            <img src="https://images.unsplash.com/photo-1550639524-a6f58345a083?q=80&w=800&auto=format&fit=crop" alt="Product" class="product-img">
+                        </a>
+                        <div class="product-actions">
+                            <button class="btn btn-primary btn-full add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">AURA STUDIO</span>
+                        <a href="product-detail" class="product-name">Oversized Knit Sweater</a>
+                        <div class="product-price">$75.00</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promotional Banner -->
+        <section class="container my-xxl">
+            <div class="hero" style="height: 400px; min-height: 400px; border-radius: var(--border-radius);">
+                <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=2000&auto=format&fit=crop" alt="Promotion" class="hero-img">
+                <div class="hero-overlay" style="background: rgba(0,0,0,0.4);"></div>
+                <div class="hero-content">
+                    <h2 class="hero-title" style="font-size: 3rem;">Mid-Season Sale</h2>
+                    <p class="hero-subtitle">Up to 50% off selected styles.</p>
+                    <a href="products" class="btn btn-primary" style="background: white; color: black;">Shop Sale</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <h2 class="text-2xl mb-sm">Join the AURA Club</h2>
+            <p class="text-muted">Sign up for exclusive offers, original stories, events and more.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault();">
+                <input type="email" class="input-field" placeholder="Enter your email address" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- ================= START FOOTER ================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="logo" style="margin-bottom: var(--spacing-md); font-size: 1.5rem;">AURA</h4>
+                    <p class="text-sm" style="color: #a0a0a0; max-width: 250px;">Redefining modern wardrobe essentials with timeless pieces designed to last.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="products">Women</a></li>
+                        <li><a href="products">Men</a></li>
+                        <li><a href="products">Accessories</a></li>
+                        <li><a href="products">New Arrivals</a></li>
+                        <li><a href="products">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="contact">Customer Service</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Shipping Information</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul style="flex-direction: row; gap: var(--spacing-md);">
+                        <li><a href="#" style="font-size: 1.25rem;"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#" style="font-size: 1.25rem;"><i class="fa-brands fa-tiktok"></i></a></li>
+                        <li><a href="#" style="font-size: 1.25rem;"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#" style="font-size: 1.25rem;"><i class="fa-brands fa-pinterest"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AURA Clothing. All rights reserved.</p>
+                <div class="flex gap-md">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ================= END FOOTER ================= -->
+
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

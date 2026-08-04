@@ -16,26 +16,7 @@
 </head>
 <body>
 
-    <!-- ================= START HEADER ================= -->
-    <header class="header">
-        <div class="container flex justify-between items-center">
-            <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
-            <nav class="nav-desktop">
-                <a href="products" class="nav-link">New Arrivals</a>
-                <a href="products" class="nav-link">Women</a>
-                <a href="products" class="nav-link">Men</a>
-                <a href="products" class="nav-link">Accessories</a>
-            </nav>
-            <a href="index" class="logo">AURA</a>
-            <div class="header-icons">
-                <a href="#" class="icon-btn" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
-                <a href="profile" class="icon-btn" title="Profile"><i class="fa-regular fa-user"></i></a>
-                <a href="#" class="icon-btn wishlist-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></a>
-                <a href="cart" class="icon-btn" title="Cart"><i class="fa-solid fa-bag-shopping"></i></a>
-            </div>
-        </div>
-    </header>
-    <!-- ================= END HEADER ================= -->
+    {% include 'shop/navbar.html' %}
 
     <main class="container">
         <h1 class="text-3xl mt-lg mb-md">Your Cart</h1>
@@ -134,46 +115,8 @@
         </div>
     </main>
 
-    <!-- ================= START FOOTER ================= -->
-    <footer class="footer">
-        <!-- Footer content... -->
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4 class="logo" style="margin-bottom: var(--spacing-md); font-size: 1.5rem;">AURA</h4>
-                    <p class="text-sm" style="color: #a0a0a0; max-width: 250px;">Redefining modern wardrobe essentials with timeless pieces designed to last.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Shop</h4>
-                    <ul>
-                        <li><a href="products">Women</a></li>
-                        <li><a href="products">Men</a></li>
-                        <li><a href="products">Accessories</a></li>
-                        <li><a href="products">Sale</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Help</h4>
-                    <ul>
-                        <li><a href="contact">Customer Service</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Connect</h4>
-                    <ul style="flex-direction: row; gap: var(--spacing-md);">
-                        <li><a href="#" style="font-size: 1.25rem;"><i class="fa-brands fa-instagram"></i></a></li>
-                        <li><a href="#" style="font-size: 1.25rem;"><i class="fa-brands fa-twitter"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 AURA Clothing. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-    <!-- ================= END FOOTER ================= -->
+        {% include 'shop/footer.html' %}
 
-    <script src="js/main.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

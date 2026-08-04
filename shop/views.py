@@ -21,3 +21,9 @@ def login(request):
 
 def register(request):
     return render(request,'shop/register.html')
+
+def orders(request):
+    return render(request,'shop/orders.html')
+
+def profile(request):
+    return render(request,'shop/profile.html')

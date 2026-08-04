@@ -16,32 +16,11 @@
 </head>
 <body>
 
-    <!-- ================= START HEADER ================= -->
-    <header class="header">
-        <div class="container flex justify-between items-center">
-            <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
-            <nav class="nav-desktop">
-                <a href="products" class="nav-link">New Arrivals</a>
-                <a href="products" class="nav-link">Women</a>
-                <a href="products" class="nav-link">Men</a>
-                <a href="products" class="nav-link">Accessories</a>
-            </nav>
-            <a href="index" class="logo">AURA</a>
-            <div class="header-icons">
-                <a href="#" class="icon-btn" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
-                <a href="profile" class="icon-btn" title="Profile"><i class="fa-solid fa-user"></i></a>
-                <a href="#" class="icon-btn wishlist-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></a>
-                <a href="cart" class="icon-btn" title="Cart"><i class="fa-solid fa-bag-shopping"></i></a>
-            </div>
-        </div>
-    </header>
-    <!-- ================= END HEADER ================= -->
+    {% include 'shop/navbar.html' %}
 
     <main class="container">
         <h1 class="text-3xl mt-lg">My Account</h1>
-
         <div class="account-layout">
-            
             <aside class="account-sidebar">
                 <a href="profile" class="account-link active">Personal Information</a>
                 <a href="orders" class="account-link">Order History</a>
@@ -82,7 +61,6 @@
                             <input type="password" class="input-field">
                         </div>
                     </div>
-
                     <button type="submit" class="btn btn-primary mt-sm">Save Changes</button>
                 </form>
             </div>
@@ -90,13 +68,8 @@
         </div>
     </main>
 
-    <!-- ================= START FOOTER ================= -->
-    <footer class="footer">
-        <div class="container text-center text-sm text-muted" style="padding-top: var(--spacing-xl);">
-            <p>&copy; 2026 AURA Clothing. All rights reserved.</p>
-        </div>
-    </footer>
+{% include 'shop/footer.html' %}
 
-    <script src="js/main.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

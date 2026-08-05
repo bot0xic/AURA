@@ -1,13 +1,23 @@
 from django.shortcuts import render
+from .models import *
 
 # Create your views here.
 def home(request):
+
     return render(request,'shop/index.html')
 
-def products(request):
-    return render(request,'shop/products.html')
+def products(request,gender=None):
+    products = Product.objects.all()
+    if gender:
+        products = products.filter(target_gender=gender)
+    context = {
+        'products':products,
+        'current_gender':gender
+    }
+    return render(request,'shop/products.html',context)
 
 def cart(request):
+
     return render(request,'shop/cart.html')
 
 def product_detail(request):

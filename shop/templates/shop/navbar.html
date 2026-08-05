@@ -9,10 +9,10 @@
 
         <!-- Navigation -->
         <nav class="nav-desktop">
-            <a href="products" class="nav-link">New Arrivals</a>
-            <a href="products" class="nav-link">Women</a>
-            <a href="products" class="nav-link">Men</a>
-            <a href="products" class="nav-link">Accessories</a>
+            <a href="" class="nav-link">New Arrivals</a>
+            <a href="{% url 'products' %}">All</a>
+            <a href="{% url 'products_by_gender' 'male' %}">Men</a>
+            <a href="{% url 'products_by_gender' 'female' %}">Women</a>
         </nav>
 
         <!-- Logo -->
@@ -21,7 +21,7 @@
         <!-- Header Icons -->
         <div class="header-icons">
             <a href="#" class="icon-btn" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
-            <a href="profile" class="icon-btn" title="Profile"><i class="fa-regular fa-user"></i></a>
+            <a href="{% url 'profile' %}" class="icon-btn" title="Profile"><i class="fa-regular fa-user"></i></a>
             <a href="#" class="icon-btn wishlist-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></a>
             <a href="cart" class="icon-btn" title="Cart"><i class="fa-solid fa-bag-shopping"></i></a>
         </div>
